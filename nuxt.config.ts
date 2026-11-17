@@ -1,0 +1,21 @@
+// https://nuxt.com/docs/api/configuration/nuxt-config
+export default defineNuxtConfig({
+  modules: ['@nuxt/icon/module', 'shadcn-nuxt', '@vueuse/nuxt/module', '@nuxt/eslint'],
+  compatibilityDate: '2025-07-15',
+  ssr: false,
+  devtools: {enabled: true},
+  shadcn: {
+    /**
+     * Prefix for all the imported component.
+     * @default "Ui"
+     */
+    prefix: '',
+    /**
+     * Directory that the component lives in.
+     * Will respect the Nuxt aliases.
+     * @link https://nuxt.com/docs/api/nuxt-config#alias
+     * @default "@/components/ui"
+     */
+    componentDir: '/components/ui'
+  }
+})

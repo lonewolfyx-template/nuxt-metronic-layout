@@ -1,15 +1,3 @@
-<script setup lang="ts">
-import type { HTMLAttributes } from "vue"
-import type { FieldVariants } from "."
-import { cn } from "cn"
-import { fieldVariants } from "."
-
-const props = defineProps<{
-  class?: HTMLAttributes["class"]
-  orientation?: FieldVariants["orientation"]
-}>()
-</script>
-
 <template>
   <div
     role="group"
@@ -23,3 +11,15 @@ const props = defineProps<{
     <slot />
   </div>
 </template>
+
+<script setup lang="ts">
+import type { HTMLAttributes } from 'vue'
+import type { FieldVariants } from '.'
+import { cn } from 'cn'
+import { fieldVariants } from '.'
+
+const props = defineProps<{
+  class?: HTMLAttributes['class']
+  orientation?: FieldVariants['orientation']
+}>()
+</script>

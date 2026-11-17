@@ -1,15 +1,3 @@
-<script setup lang="ts">
-import type { HTMLAttributes } from "vue"
-import type { ItemMediaVariants } from "."
-import { cn } from "cn"
-import { itemMediaVariants } from "."
-
-const props = defineProps<{
-  class?: HTMLAttributes["class"]
-  variant?: ItemMediaVariants["variant"]
-}>()
-</script>
-
 <template>
   <div
     data-slot="item-media"
@@ -19,3 +7,15 @@ const props = defineProps<{
     <slot />
   </div>
 </template>
+
+<script setup lang="ts">
+import type { HTMLAttributes } from 'vue'
+import type { ItemMediaVariants } from '.'
+import { cn } from 'cn'
+import { itemMediaVariants } from '.'
+
+const props = defineProps<{
+  class?: HTMLAttributes['class']
+  variant?: ItemMediaVariants['variant']
+}>()
+</script>

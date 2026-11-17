@@ -1,4 +1,9 @@
-allowBuilds:
-  esbuild: true
+minimumReleaseAgeExcludePrune: true
 minimumReleaseAgeExclude:
   - '@nuxt/icon@2.6.3'
+
+trustPolicy: no-downgrade
+shellEmulator: true
+
+allowBuilds:
+  esbuild: true

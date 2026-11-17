@@ -1,15 +1,3 @@
-<script lang="ts" setup>
-import type { DrawerTitleProps } from "reka-ui"
-import type { HTMLAttributes } from "vue"
-import { reactiveOmit } from "@vueuse/core"
-import { cn } from "cn"
-import { DrawerTitle } from "reka-ui"
-
-const props = defineProps<DrawerTitleProps & { class?: HTMLAttributes["class"] }>()
-
-const delegatedProps = reactiveOmit(props, "class")
-</script>
-
 <template>
   <DrawerTitle
     data-slot="drawer-title"
@@ -19,3 +7,15 @@ const delegatedProps = reactiveOmit(props, "class")
     <slot />
   </DrawerTitle>
 </template>
+
+<script lang="ts" setup>
+import type { DrawerTitleProps } from 'reka-ui'
+import type { HTMLAttributes } from 'vue'
+import { reactiveOmit } from '@vueuse/core'
+import { cn } from 'cn'
+import { DrawerTitle } from 'reka-ui'
+
+const props = defineProps<DrawerTitleProps & { class?: HTMLAttributes['class'] }>()
+
+const delegatedProps = reactiveOmit(props, 'class')
+</script>

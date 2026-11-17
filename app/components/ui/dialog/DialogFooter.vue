@@ -1,17 +1,3 @@
-<script setup lang="ts">
-import type { HTMLAttributes } from "vue"
-import { cn } from "cn"
-import { DialogClose } from "reka-ui"
-import { Button } from '@/components/ui/button'
-
-const props = withDefaults(defineProps<{
-  class?: HTMLAttributes["class"]
-  showCloseButton?: boolean
-}>(), {
-  showCloseButton: false,
-})
-</script>
-
 <template>
   <div
     data-slot="dialog-footer"
@@ -25,3 +11,17 @@ const props = withDefaults(defineProps<{
     </DialogClose>
   </div>
 </template>
+
+<script setup lang="ts">
+import type { HTMLAttributes } from 'vue'
+import { cn } from 'cn'
+import { DialogClose } from 'reka-ui'
+import { Button } from '@/components/ui/button'
+
+const props = withDefaults(defineProps<{
+  class?: HTMLAttributes['class']
+  showCloseButton?: boolean
+}>(), {
+  showCloseButton: false,
+})
+</script>

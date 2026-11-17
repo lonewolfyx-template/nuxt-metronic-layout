@@ -1,20 +1,3 @@
-<script setup lang="ts">
-import type { PrimitiveProps } from "reka-ui"
-import type { HTMLAttributes } from "vue"
-import type { ButtonGroupVariants } from "."
-import { cn } from "cn"
-import { Primitive } from "reka-ui"
-
-interface Props extends PrimitiveProps {
-  class?: HTMLAttributes["class"]
-  orientation?: ButtonGroupVariants["orientation"]
-}
-
-const props = withDefaults(defineProps<Props>(), {
-  as: "div",
-})
-</script>
-
 <template>
   <Primitive
     role="group"
@@ -26,3 +9,20 @@ const props = withDefaults(defineProps<Props>(), {
     <slot />
   </Primitive>
 </template>
+
+<script setup lang="ts">
+import type { PrimitiveProps } from 'reka-ui'
+import type { HTMLAttributes } from 'vue'
+import type { ButtonGroupVariants } from '.'
+import { cn } from 'cn'
+import { Primitive } from 'reka-ui'
+
+interface Props extends PrimitiveProps {
+  class?: HTMLAttributes['class']
+  orientation?: ButtonGroupVariants['orientation']
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  as: 'div',
+})
+</script>

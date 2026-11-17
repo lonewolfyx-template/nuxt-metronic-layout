@@ -2,10 +2,15 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ['@nuxt/icon/module', 'shadcn-nuxt', '@vueuse/nuxt/module', '@nuxt/eslint'],
+  modules: [
+    '@nuxt/icon/module',
+    'shadcn-nuxt',
+    '@vueuse/nuxt/module',
+    '@nuxt/eslint',
+  ],
   compatibilityDate: '2025-07-15',
   ssr: false,
-  devtools: {enabled: true},
+  devtools: { enabled: true },
 
   css: ['~/assets/css/main.css'],
   vite: {
@@ -13,7 +18,6 @@ export default defineNuxtConfig({
       tailwindcss(),
     ],
   },
-
 
   shadcn: {
     /**
@@ -27,6 +31,6 @@ export default defineNuxtConfig({
      * @link https://nuxt.com/docs/api/nuxt-config#alias
      * @default "@/components/ui"
      */
-    componentDir: '/components/ui'
-  }
+    componentDir: '/components/ui',
+  },
 })
